@@ -1,0 +1,152 @@
+ID,Status,Age,Sex,Race,Histology,Stage,ClinicalCourse
+GSM1948559,Normal Liver,0.7,Male,Caucasian,"Normal Liver",,
+GSM1948560,Tumor,0.7,Male,Caucasian," Epithelial hepatoblastoma, fetal, embryonal and minor small cell",,
+GSM1948561,Tumor,1.6,Female,Â NA,"Epithelial hepatoblastoma mitotically active fetal and embryonal",,
+GSM1948562,Tumor,2.3,Male,Caucasian," Epithelial hepatoblastoma, fetal and embryonal",,
+GSM1948563,Tumor,0.4,Female,Caucasian," Epithelial hepatoblastoma, embryonal and small cell",,
+GSM1948564,Tumor,8.8,Female,Caucasian," Hepatocellular neoplasm, NOS",,
+GSM1948565,Tumor,1.8,Male,Caucasian," Epithelial hepatoblastoma, fetal and embryonal",,
+GSM1948566,Tumor,0.9,Female,Caucasian,"Epithelial hepatoblastoma predominantly fetal and embryonal",,
+GSM1948567,Tumor,1.8,Male,Caucasian," Epithelial hepatoblastoma, embryonal, fetal and minor small cell",,
+GSM1948568,Tumor,2.3,Female,Other," Mixed hepatoblastoma, predominately epithelial (fetal and embryonal), small area of osteoid",,
+GSM1948569,Tumor,1,Female,Caucasian," Epithelial hepatoblastoma, embryonal and fetal",,
+GSM1948570,Tumor,0.9,Male,Caucasian,"Mixed epithelial and mesenchymal hepatoblastoma",,
+GSM1948571,Tumor,1.2,Male,Â NA," Epithelial hepatoblastoma, mixed fetal and small cell",,
+GSM1948572,Tumor,0.4,Male,Caucasian," Epithelial hepatoblastoma, predominately embryonal",,
+GSM1948573,Tumor,1.5,Male,Caucasian," Epithelial hepatoblastoma, mitotically active fetal",,
+GSM1948574,Tumor,1.2,Female,Caucasian," Mixed hepatoblastoma, predominately meshenchymal, 14% fetal  and 1% embryonal",,
+GSM1948575,Tumor,1.3,Female,Caucasian,"Epithelial hepatoblastoma",,
+GSM1948576,Tumor,1.8,Male,Hispanic," Epithelial hepatoblastoma, embryonal and fetal",,
+GSM1948577,Tumor,1.5,Male,Caucasian," Epithelial hepatoblastoma, embryonal and fetal",,
+GSM1948578,Tumor,0.6,Female,Caucasian," Epithelial hepatoblastoma, fetal (20%), embryonal (70%) and small cell (10%)",,
+GSM1948579,Normal Liver,3.6,Male,Caucasian,"Normal Liver",,
+GSM1948580,Tumor,1.3,Female,Asian," Epithelial hepatoblastoma, embryonal (65%) and fetal (15%)",,
+GSM1948581,Tumor,3,Female,Caucasian," Epithelial hepatoblastoma, pure fetal",,
+GSM1948582,Normal Liver,0.3,Male,Caucasian,"Normal Liver",,
+GSM1948583,Normal Liver,1.3,Male,Other,"Normal Liver",,
+GSM1948584,Tumor,1.3,Male,Other," Epithelial hepatoblastoma , embryonal",,
+GSM1948585,Tumor,1.2,Male,African American," Epithelial hepatoblastoma, embryonal, fetal and 15-20% small cell",,
+GSM1948586,Tumor,0.9,Female,Caucasian," Epithelial hepatoblastoma, fetal, embryonal with rare small cell",,
+GSM1948587,Normal Liver,2.8,Male,Caucasian,"Normal Liver",,
+GSM1948588,Tumor,2.8,Male,Caucasian," Epithelial hepatoblastoma, fetal (70%), embryonal (10%), small cell (20%)",,
+GSM1948589,Tumor,0.8,Female,Caucasian," Mixed epithelial and mesenchymal, fetal (60%), embryonal (20%), stromal (10%), blastema (5%) and small cell (2%)",,
+GSM1948590,Tumor,6.7,Female,Caucasian," Epithelial, hepatoblastoma embryonal, fetal, some anaplastia, telangiectatic",,
+GSM1948591,Tumor,1.5,Female,Other," Epithelial hepatoblastoma, embryonalÂ ",,
+GSM1948592,Tumor,1.3,Female,Caucasian," Epithelial hepatoblastoma, embryonal",,
+GSM1948593,Tumor,2.1,Female,Caucasian," Epithelial hepatoblastoma, fetal",,
+GSM1948594,Tumor,2.8,Female,Caucasian," Epithelial hepatoblastoma, fetal and embryonalÂ ",,
+GSM1948595,Tumor,2.3,Male,Asian," Epitthelial hepatoblastoma, embryonal and blastemal",,
+GSM1948596,Tumor,1.4,Male,Unknown," Epithelial hepatoblastoma, embryonal",,
+GSM1948597,Tumor,1.4,Male,Hispanic," Epithelial hepatoblastoma, embryonal",,
+GSM1948598,Tumor,1.3,Male,Caucasian," Epithelial hepatoblastoma, fetal",,
+GSM1948599,Tumor,0.3,Female,Asian," Epithelial hepatoblastoma, embryonalÂ and fetalÂ ",,
+GSM1948600,Tumor,1.1,Male,Caucasian," Epithelial hepatoblastoma, embryonalÂ  and fetal",,
+GSM1948601,Tumor,NaN,Female,Caucasian," Epithelial hepatoblastoma, embryonal and fetal",,
+GSM1948602,Tumor,1.1,Female,Caucasian," Epithelial hepatoblastoma, crowded fetalÂ ",,
+GSM1948603,Tumor,3.7,Male,Caucasian,"Epithelial hepatoblastomaÂ ",,
+GSM1948604,Tumor,1.6,Male,Caucasian," Epithelial hepatoblastoma, mitotically active fetal",,
+GSM1948605,Tumor,0.4,Male,African American,"Normal liver",,
+GSM1948606,Tumor,1.6,Male,Caucasian," Epithelial hepatoblastoma, embryonal",,
+GSM1948607,Tumor,3.2,Male,Hispanic,"Epithelial hepatoblastoma",,
+GSM1948608,Tumor,1.8,Male,African American," Epithelial hepatoblastoma, fetalÂ ",,
+GSM1948609,Tumor,0.4,Male,Hispanic,"Epithelial hepatoblastomaÂ ",,
+GSM1948610,Tumor,2.6,Female,Caucasian," Epithelial, embryonal, fetal, minor small cell",,
+GSM1948611,Tumor,1.3,Female,Hispanic,"Epithelial hepatoblastomaÂ ",,
+GSM1948612,Tumor,1.9,Female,Caucasian," Epithelial, embryonal, nesting pattern (small cell)",,
+GSM1948613,Tumor,1,Female,Caucasian," Epithelial, embryonal and  small cell (minor)",,
+GSM3770503,Tumor,2.75,Female,,"Well differentiated",3,Alive
+GSM3770504,Tumor,2.5,Female,,"Other",3,Dead
+GSM3770505,Tumor,4.08333333333333,Female,,"Poorly differentiated",3,Alive
+GSM3770506,Tumor,0.166666666666667,Male,,"Well differentiated",2,Alive
+GSM3770507,Tumor,0.333333333333333,Male,,"Well differentiated",3,Dead
+GSM3770508,Tumor,2.83333333333333,Male,,"Well differentiated",3,Alive
+GSM3770509,Tumor,1.91666666666667,Female,,"Poorly differentiated",3,Alive
+GSM3770510,Tumor,1.75,Female,,"Well differentiated",2,Alive
+GSM3770511,Tumor,3.83333333333333,Female,,"Well differentiated",4,Alive
+GSM3770512,Tumor,0,Male,,"Well differentiated",3,Alive
+GSM3770513,Tumor,1.08333333333333,Female,,"Poorly differentiated",2,Alive
+GSM3770514,Tumor,1.41666666666667,Female,,"Well differentiated",2,Alive
+GSM3770515,Tumor,9.08333333333333,Female,,"Well differentiated",2,Dead
+GSM3770516,Tumor,0.333333333333333,Female,,"Poorly differentiated",2,Dead
+GSM3770517,Tumor,0.5,Male,,"Well differentiated",3,Alive
+GSM3770518,Tumor,6.83333333333333,Male,,"Poorly differentiated",4,Dead
+GSM3770519,Tumor,1.33333333333333,Male,,"Well differentiated",3,Dead
+GSM3770520,Tumor,1.83333333333333,Male,,"Well differentiated",3,Dead
+GSM3770521,Tumor,1.25,Female,,"Poorly differentiated",4,Alive
+GSM3770522,Tumor,1,Male,,"Well differentiated",2,Dead
+GSM3770523,Tumor,3.25,Female,,"Well differentiated",2,Alive
+GSM3770524,Tumor,3.58333333333333,Female,,"Well differentiated",4,Dead
+GSM3770525,Tumor,0.583333333333333,Female,,"Poorly differentiated",4,Alive
+GSM3770526,Tumor,3.16666666666667,Male,,"Poorly differentiated",2,Alive
+GSM3770527,Tumor,2.16666666666667,Male,,"Poorly differentiated",1,Dead
+GSM3770528,Tumor,0.416666666666667,Female,,"Well differentiated",1,Alive
+GSM3770529,Tumor,0.916666666666667,Female,,"Well differentiated",1,Alive
+GSM3770530,Tumor,1.08333333333333,Male,,"Well differentiated",3,Alive
+GSM3770531,Tumor,5.75,Male,,"Well differentiated",2,Alive
+GSM3770532,Tumor,1.5,Female,,"Well differentiated",2,Alive
+GSM3770533,Tumor,0.75,Male,,"Well differentiated",2,Alive
+GSM3770534,Tumor,2.5,Male,,"Poorly differentiated",3,Dead
+GSM3770535,Tumor,1.83333333333333,Male,,"Well differentiated",1,Alive
+GSM3770536,Tumor,1.91666666666667,Male,,"Well differentiated",4,Dead
+GSM3770537,Tumor,0.25,Male,,"Poorly differentiated",3,Alive
+GSM3770538,Tumor,0.583333333333333,Male,,"Well differentiated",2,Alive
+GSM3770539,Tumor,1.08333333333333,Male,,"Well differentiated",3,Alive
+GSM3770540,Tumor,1.33333333333333,Male,,"Poorly differentiated",1,Alive
+GSM3770541,Tumor,1.33333333333333,Female,,"Well differentiated",4,Alive
+GSM3770542,Tumor,4.5,Female,,"Poorly differentiated",1,Dead
+GSM3770543,Tumor,1.08333333333333,Male,,"Poorly differentiated",3,Alive
+GSM3770544,Tumor,2.75,Female,,"Poorly differentiated",4,Alive
+GSM3770545,Tumor,1.83333333333333,Male,,"Other",2,Alive
+GSM3770546,Tumor,2.5,Female,,"Poorly differentiated",3,Alive
+GSM3770547,Tumor,1.58333333333333,Female,,"Well differentiated",1,Alive
+GSM3770548,Tumor,2.16666666666667,Male,,"Poorly differentiated",4,Dead
+GSM3770549,Tumor,2.16666666666667,Male,,"Well differentiated",3,Alive
+GSM3770550,Tumor,3.33333333333333,Male,,"Poorly differentiated",3,Alive
+GSM3770551,Tumor,2.41666666666667,Female,,"Poorly differentiated",4,Dead
+GSM3770552,Tumor,8.16666666666667,Female,,"Poorly differentiated",1,Alive
+GSM3770553,Tumor,0.75,Male,,"Poorly differentiated",1,Alive
+GSM3770554,Tumor,1,Female,,"Well differentiated",2,Alive
+GSM3770555,Tumor,7.25,Male,,"Well differentiated",4,Alive
+GSM3770556,Normal Liver,1.33333333333333,Male,,"Well differentiated",N/A,N/A
+GSM3770557,Normal Liver,1.08333333333333,Female,,"Well differentiated",N/A,N/A
+GSM3770558,Normal Liver,3.16666666666667,Male,,"Well differentiated",N/A,N/A
+GSM3770559,Normal Liver,1.91666666666667,Male,,"Well differentiated",N/A,N/A
+GSM3770560,Normal Liver,5.75,Male,,"Well differentiated",N/A,N/A
+GSM3770561,Normal Liver,1.5,Female,,"Well differentiated",N/A,N/A
+GSM3770562,Normal Liver,1,Female,,"Well differentiated",N/A,N/A
+GSM3770563,Normal Liver,1.75,Female,,"Well differentiated",N/A,N/A
+GSM3770564,Normal Liver,0.416666666666667,Female,,"Well differentiated",N/A,N/A
+GSM3770565,Normal Liver,0.916666666666667,Female,,"Well differentiated",N/A,N/A
+GSM3770566,Normal Liver,8.16666666666667,Female,,"Well differentiated",N/A,N/A
+GSM3770567,Normal Liver,1.25,Female,,"Well differentiated",N/A,N/A
+GSM3770568,Normal Liver,3.33333333333333,Male,,"Well differentiated",N/A,N/A
+GSM3770569,Normal Liver,0.583333333333333,Male,,"Well differentiated",N/A,N/A
+HB11,Tumor,1.5,Female,,"",,Dead
+HB28,Tumor,2.83333333333333,Male,,"",,Alive
+HB33,Tumor,1,Male,,"",,Dead
+HB48,Tumor,6,Male,,"",,Dead
+HB49,Tumor,1.25,Female,,"",,
+HB5,Tumor,7,Male,,"",,Dead
+HB54,Tumor,0.833333333333333,Male,,"",,Alive
+HB59,Tumor,2,Female,,"",,Alive
+HB60,Tumor,2.5,Female,,"",,Alive
+HB62,Tumor,1.33333333333333,Male,,"",,Alive
+HB63,Tumor,17,Male,,"",,Alive
+HB69,Tumor,2.08333333333333,Male,,"",,Alive
+HB70,Tumor,3.5,Female,,"",,Alive
+HB72,Tumor,1.33333333333333,Female,,"",,Dead
+HB73,Tumor,2,Female,,"",,Dead
+HB74F,Tumor,8,Male,,"",,Alive
+HB74e,Tumor,8,Male,,"",,Alive
+HB75,Tumor,1.75,Male,,"",,Alive
+HB78,Tumor,10.5,Male,,"",,Alive
+HB79,Tumor,12,Male,,"",,Alive
+HB80,Tumor,15,Male,,"",,Dead
+HB81,Tumor,1.83333333333333,Male,,"",,Alive
+HB82,Tumor,10,Male,,"",,Alive
+HB83,Tumor,1.25,Male,,"",,Alive
+HB86,Tumor,0.0833333333333333,Male,,"",,Alive
+NT1,Normal Liver,6,Male,,"",,
+NT2,Normal Liver,NaN,Female,,"",,
+NT3,Normal Liver,NaN,Male,,"",,
+NT4,Normal Liver,4,Female,,"",,
