@@ -1,6 +1,6 @@
 # Hepatoblastoma-Children-Classification
 If you use this code, please cite the associated paper:
-"Giuseppe Magazzù, Guido Zampieri and Claudio Angione - A Practical Guide to Integrating Multimodal Machine Learning and Metabolic Modeling".
+"Giuseppe Magazzù, Guido Zampieri and Claudio Angione - Clinical profiles can modulate the diagnostic accuracy of omics data within machine learning and genome-scale metabolic models of hepatoblastoma".
 The necessary data and code are provided to reproduce the experiments presented in the paper, figures and analyses on the results included.
 
 ## License
