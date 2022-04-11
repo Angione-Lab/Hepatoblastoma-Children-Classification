@@ -9,6 +9,9 @@ The code to compute the metabolic fluxes is contained in the folder `Metabolic f
 To run the machine learning pipelines please use the code in the folder `Pipelines`.
 The figures shown in the paper can be generated with the code present in the folder `Results and Figures`.
 For all other analyses conducted in the paper please refer to the code present in the folder `Weights and enrichments analyses`.
+Finally, in the folder `Utils` some functions can be found to run the other scripts.
+
+In all the scripts the paths to data, functions and other scripts need to be changed manually.
 
 ## License
 
