@@ -1,0 +1,56 @@
+ID,Status,Age,Sex,Race,Histology
+GSM1948559,Normal Liver, (yrs): 0.7, M, Caucasian, Normal Liver
+GSM1948560,Tumor, (yrs): 0.7, M, Caucasian," Epithelial hepatoblastoma, fetal, embryonal and minor small cell"
+GSM1948561,Tumor, (yrs): 1.6, F, Â NA, Epithelial hepatoblastoma mitotically active fetal and embryonal
+GSM1948562,Tumor, (yrs): 2.3, M, Caucasian," Epithelial hepatoblastoma, fetal and embryonal"
+GSM1948563,Tumor, (yrs): 0.4, F, Caucasian," Epithelial hepatoblastoma, embryonal and small cell"
+GSM1948564,Tumor, (yrs): 8.8, F, Caucasian," Hepatocellular neoplasm, NOS"
+GSM1948565,Tumor, (yrs): 1.8, M, Caucasian," Epithelial hepatoblastoma, fetal and embryonal"
+GSM1948566,Tumor, (yrs): 0.9, F, Caucasian, Epithelial hepatoblastoma predominantly fetal and embryonal
+GSM1948567,Tumor, (yrs): 1.8, M, Caucasian," Epithelial hepatoblastoma, embryonal, fetal and minor small cell"
+GSM1948568,Tumor, (yrs): 2.3, F, Other," Mixed hepatoblastoma, predominately epithelial (fetal and embryonal), small area of osteoid"
+GSM1948569,Tumor, (yrs): 1.0, F, Caucasian," Epithelial hepatoblastoma, embryonal and fetal"
+GSM1948570,Tumor, (yrs): 0.9, M, Caucasian, Mixed epithelial and mesenchymal hepatoblastoma
+GSM1948571,Tumor, (yrs): 1.2, M, Â NA," Epithelial hepatoblastoma, mixed fetal and small cell"
+GSM1948572,Tumor, (yrs): 0.4, M, Caucasian," Epithelial hepatoblastoma, predominately embryonal"
+GSM1948573,Tumor, (yrs): 1.5, M, Caucasian," Epithelial hepatoblastoma, mitotically active fetal"
+GSM1948574,Tumor, (yrs): 1.2, F, Caucasian," Mixed hepatoblastoma, predominately meshenchymal, 14% fetal  and 1% embryonal"
+GSM1948575,Tumor, (yrs): 1.3, F, Caucasian, Epithelial hepatoblastoma
+GSM1948576,Tumor, (yrs): 1.8, M, Hispanic," Epithelial hepatoblastoma, embryonal and fetal"
+GSM1948577,Tumor, (yrs): 1.5, M, Caucasian," Epithelial hepatoblastoma, embryonal and fetal"
+GSM1948578,Tumor, (yrs): 0.6, F, Caucasian," Epithelial hepatoblastoma, fetal (20%), embryonal (70%) and small cell (10%)"
+GSM1948579,Normal Liver, (yrs): 3.6, M, Caucasian, Normal Liver
+GSM1948580,Tumor, (yrs): 1.3, F, Asian," Epithelial hepatoblastoma, embryonal (65%) and fetal (15%)"
+GSM1948581,Tumor, (yrs): 3.0, F, Caucasian," Epithelial hepatoblastoma, pure fetal"
+GSM1948582,Normal Liver, (yrs): 0.3, M, Caucasian, Normal Liver
+GSM1948583,Normal Liver, (yrs): 1.3, M, Other, Normal Liver
+GSM1948584,Tumor, (yrs): 1.3, M, Other," Epithelial hepatoblastoma , embryonal"
+GSM1948585,Tumor, (yrs): 1.2, M, African American," Epithelial hepatoblastoma, embryonal, fetal and 15-20% small cell"
+GSM1948586,Tumor, (yrs): 0.9, F, Caucasian," Epithelial hepatoblastoma, fetal, embryonal with rare small cell"
+GSM1948587,Normal Liver, (yrs): 2.8, M, Caucasian, Normal Liver
+GSM1948588,Tumor, (yrs): 2.8, M, Caucasian," Epithelial hepatoblastoma, fetal (70%), embryonal (10%), small cell (20%)"
+GSM1948589,Tumor, (yrs): 0.8, F, Caucasian," Mixed epithelial and mesenchymal, fetal (60%), embryonal (20%), stromal (10%), blastema (5%) and small cell (2%)"
+GSM1948590,Tumor, (yrs): 6.7, F, Caucasian," Epithelial, hepatoblastoma embryonal, fetal, some anaplastia, telangiectatic"
+GSM1948591,Tumor, (yrs): 1.5, F, Other," Epithelial hepatoblastoma, embryonalÂ "
+GSM1948592,Tumor, (yrs): 1.3, F, Caucasian," Epithelial hepatoblastoma, embryonal"
+GSM1948593,Tumor, (yrs): 2.1, F, Caucasian," Epithelial hepatoblastoma, fetal"
+GSM1948594,Tumor, (yrs): 2.8, F, Caucasian," Epithelial hepatoblastoma, fetal and embryonalÂ "
+GSM1948595,Tumor, (yrs): 2.3, M, Asian," Epitthelial hepatoblastoma, embryonal and blastemal"
+GSM1948596,Tumor, (yrs): 1.4, M, Unknown," Epithelial hepatoblastoma, embryonal"
+GSM1948597,Tumor, (yrs): 1.4, M, Hispanic," Epithelial hepatoblastoma, embryonal"
+GSM1948598,Tumor, (yrs): 1.3, M, Caucasian," Epithelial hepatoblastoma, fetal"
+GSM1948599,Tumor, (yrs): 0.3, F, Asian," Epithelial hepatoblastoma, embryonalÂ and fetalÂ "
+GSM1948600,Tumor, (yrs): 1.1, M, Caucasian," Epithelial hepatoblastoma, embryonalÂ  and fetal"
+GSM1948601,Tumor,, F, Caucasian," Epithelial hepatoblastoma, embryonal and fetal"
+GSM1948602,Tumor, (yrs): 1.1, F, Caucasian," Epithelial hepatoblastoma, crowded fetalÂ "
+GSM1948603,Tumor, (yrs): 3.7, M, Caucasian, Epithelial hepatoblastomaÂ 
+GSM1948604,Tumor, (yrs): 1.6, M, Caucasian," Epithelial hepatoblastoma, mitotically active fetal"
+GSM1948605,Tumor, (yrs): 0.4, M, African American, Normal liver
+GSM1948606,Tumor, (yrs): 1.6, M, Caucasian," Epithelial hepatoblastoma, embryonal"
+GSM1948607,Tumor, (yrs): 3.2, M, Hispanic, Epithelial hepatoblastoma
+GSM1948608,Tumor, (yrs): 1.8, M, African American," Epithelial hepatoblastoma, fetalÂ "
+GSM1948609,Tumor, (yrs): 0.4, M, Hispanic, Epithelial hepatoblastomaÂ 
+GSM1948610,Tumor, (yrs): 2.6, F, Caucasian," Epithelial, embryonal, fetal, minor small cell"
+GSM1948611,Tumor, (yrs): 1.3, F, Hispanic, Epithelial hepatoblastomaÂ 
+GSM1948612,Tumor, (yrs): 1.9, F, Caucasian," Epithelial, embryonal, nesting pattern (small cell)"
+GSM1948613,Tumor, (yrs): 1.0, F, Caucasian," Epithelial, embryonal and  small cell (minor)"

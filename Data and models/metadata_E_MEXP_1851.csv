@@ -1,0 +1,30 @@
+ID,Characteristics[Age],Unit[TimeUnit],Characteristics[Sex],Characteristics[DiseaseState],Characteristics[ClinicalHistory]
+HB11,18,months,female,hepatoblastoma,Dead
+HB28,34,months,male,hepatoblastoma,Alive
+HB33,12,months,male,hepatoblastoma,Dead
+HB48,72,months,male,hepatoblastoma,Dead
+HB49,15,months,female,hepatoblastoma,  
+HB5,84,months,male,hepatoblastoma,Dead
+HB54,10,months,male,hepatoblastoma,Alive
+HB59,24,months,female,hepatoblastoma,Alive
+HB60,30,months,female,hepatoblastoma,Alive
+HB62,16,months,male,hepatoblastoma,Alive
+HB63,204,months,male,hepatoblastoma,Alive
+HB69,25,months,male,hepatoblastoma,Alive
+HB70,42,months,female,hepatoblastoma,Alive
+HB72,16,months,female,hepatoblastoma,Dead
+HB73,24,months,female,hepatoblastoma,Dead
+HB74e,96,months,male,hepatoblastoma,Alive
+HB74F,96,months,male,hepatoblastoma,Alive
+HB75,21,months,male,hepatoblastoma,Alive
+HB78,126,months,male,hepatoblastoma,Alive
+HB79,144,months,male,hepatoblastoma,Alive
+HB80,180,months,male,hepatoblastoma,Dead
+HB81,22,months,male,hepatoblastoma,Alive
+HB82,120,months,male,hepatoblastoma,Alive
+HB83,15,months,male,hepatoblastoma,Alive
+HB86,1,days,male,hepatoblastoma,Alive
+NT1,72,months,male,normal,  
+NT2,  ,months,female,normal,  
+NT3,  ,months,male,normal,  
+NT4,48,months,female,normal,  

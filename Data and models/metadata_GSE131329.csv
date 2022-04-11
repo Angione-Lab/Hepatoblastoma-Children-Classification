@@ -1,0 +1,68 @@
+ID,Status,Age,Sex,Histology,Stage,Clinical course
+GSM3770503,tumor tissue,(month): 33, Female,Well differentiated,3,Alive
+GSM3770504,tumor tissue,(month): 30, Female,Other,3,Dead
+GSM3770505,tumor tissue,(month): 49, Female,Poorly differentiated,3,Alive
+GSM3770506,tumor tissue,(month): 2, Male,Well differentiated,2,Alive
+GSM3770507,tumor tissue,(month): 4, Male,Well differentiated,3,Dead
+GSM3770508,tumor tissue,(month): 34, Male,Well differentiated,3,Alive
+GSM3770509,tumor tissue,(month): 23, Female,Poorly differentiated,3,Alive
+GSM3770510,tumor tissue,(month): 21, Female,Well differentiated,2,Alive
+GSM3770511,tumor tissue,(month): 46, Female,Well differentiated,4,Alive
+GSM3770512,tumor tissue,(month): 0, Male,Well differentiated,3,Alive
+GSM3770513,tumor tissue,(month): 13, Female,Poorly differentiated,2,Alive
+GSM3770514,tumor tissue,(month): 17, Female,Well differentiated,2,Alive
+GSM3770515,tumor tissue,(month): 109, Female,Well differentiated,2,Dead
+GSM3770516,tumor tissue,(month): 4, Female,Poorly differentiated,2,Dead
+GSM3770517,tumor tissue,(month): 6, Male,Well differentiated,3,Alive
+GSM3770518,tumor tissue,(month): 82, Male,Poorly differentiated,4,Dead
+GSM3770519,tumor tissue,(month): 16, Male,Well differentiated,3,Dead
+GSM3770520,tumor tissue,(month): 22, Male,Well differentiated,3,Dead
+GSM3770521,tumor tissue,(month): 15, Female,Poorly differentiated,4,Alive
+GSM3770522,tumor tissue,(month): 12, Male,Well differentiated,2,Dead
+GSM3770523,tumor tissue,(month): 39, Female,Well differentiated,2,Alive
+GSM3770524,tumor tissue,(month): 43, Female,Well differentiated,4,Dead
+GSM3770525,tumor tissue,(month): 7, Female,Poorly differentiated,4,Alive
+GSM3770526,tumor tissue,(month): 38, Male,Poorly differentiated,2,Alive
+GSM3770527,tumor tissue,(month): 26, Male,Poorly differentiated,1,Dead
+GSM3770528,tumor tissue,(month): 5, Female,Well differentiated,1,Alive
+GSM3770529,tumor tissue,(month): 11, Female,Well differentiated,1,Alive
+GSM3770530,tumor tissue,(month): 13, Male,Well differentiated,3,Alive
+GSM3770531,tumor tissue,(month): 69, Male,Well differentiated,2,Alive
+GSM3770532,tumor tissue,(month): 18, Female,Well differentiated,2,Alive
+GSM3770533,tumor tissue,(month): 9, Male,Well differentiated,2,Alive
+GSM3770534,tumor tissue,(month): 30, Male,Poorly differentiated,3,Dead
+GSM3770535,tumor tissue,(month): 22, Male,Well differentiated,1,Alive
+GSM3770536,tumor tissue,(month): 23, Male,Well differentiated,4,Dead
+GSM3770537,tumor tissue,(month): 3, Male,Poorly differentiated,3,Alive
+GSM3770538,tumor tissue,(month): 7, Male,Well differentiated,2,Alive
+GSM3770539,tumor tissue,(month): 13, Male,Well differentiated,3,Alive
+GSM3770540,tumor tissue,(month): 16, Male,Poorly differentiated,1,Alive
+GSM3770541,tumor tissue,(month): 16, Female,Well differentiated,4,Alive
+GSM3770542,tumor tissue,(month): 54, Female,Poorly differentiated,1,Dead
+GSM3770543,tumor tissue,(month): 13, Male,Poorly differentiated,3,Alive
+GSM3770544,tumor tissue,(month): 33, Female,Poorly differentiated,4,Alive
+GSM3770545,tumor tissue,(month): 22, Male,Other,2,Alive
+GSM3770546,tumor tissue,(month): 30, Female,Poorly differentiated,3,Alive
+GSM3770547,tumor tissue,(month): 19, Female,Well differentiated,1,Alive
+GSM3770548,tumor tissue,(month): 26, Male,Poorly differentiated,4,Dead
+GSM3770549,tumor tissue,(month): 26, Male,Well differentiated,3,Alive
+GSM3770550,tumor tissue,(month): 40, Male,Poorly differentiated,3,Alive
+GSM3770551,tumor tissue,(month): 29, Female,Poorly differentiated,4,Dead
+GSM3770552,tumor tissue,(month): 98, Female,Poorly differentiated,1,Alive
+GSM3770553,tumor tissue,(month): 9, Male,Poorly differentiated,1,Alive
+GSM3770554,tumor tissue,(month): 12, Female,Well differentiated,2,Alive
+GSM3770555,tumor tissue,(month): 87, Male,Well differentiated,4,Alive
+GSM3770556,noncancerous liver tissue,(month): 16, Male,Well differentiated,N/A,N/A
+GSM3770557,noncancerous liver tissue,(month): 13, Female,Well differentiated,N/A,N/A
+GSM3770558,noncancerous liver tissue,(month): 38, Male,Well differentiated,N/A,N/A
+GSM3770559,noncancerous liver tissue,(month): 23, Male,Well differentiated,N/A,N/A
+GSM3770560,noncancerous liver tissue,(month): 69, Male,Well differentiated,N/A,N/A
+GSM3770561,noncancerous liver tissue,(month): 18, Female,Well differentiated,N/A,N/A
+GSM3770562,noncancerous liver tissue,(month): 12, Female,Well differentiated,N/A,N/A
+GSM3770563,noncancerous liver tissue,(month): 21, Female,Well differentiated,N/A,N/A
+GSM3770564,noncancerous liver tissue,(month): 5, Female,Well differentiated,N/A,N/A
+GSM3770565,noncancerous liver tissue,(month): 11, Female,Well differentiated,N/A,N/A
+GSM3770566,noncancerous liver tissue,(month): 98, Female,Well differentiated,N/A,N/A
+GSM3770567,noncancerous liver tissue,(month): 15, Female,Well differentiated,N/A,N/A
+GSM3770568,noncancerous liver tissue,(month): 40, Male,Well differentiated,N/A,N/A
+GSM3770569,noncancerous liver tissue,(month): 7, Male,Well differentiated,N/A,N/A
