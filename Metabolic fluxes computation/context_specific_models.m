@@ -29,7 +29,7 @@ Cmax{size(gene_exp, 1), length(model.rxns)} = [];
 GeneExpressionArray = ones(numel(genes),1); 
 
 k = 1;
-
+changeCobraSolver('gurobi', 'all');
 %% Generate and save metabolic fluxes
 
 % compute fold change
