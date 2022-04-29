@@ -105,6 +105,6 @@ for i=1:length(model.lb)
 end
 
 %% Compute Flux Variability Analysis
-minFlux, maxFlux] = fluxVariability(model, 100, 'max', model.rxns);
+[minFlux, maxFlux] = fluxVariability(model, 100, 'max', model.rxns);
 
 format longG; format compact;
