@@ -5,10 +5,12 @@ data_path = 'path\';
 
 load('path\recon2.2.mat');
 
-FVA_weights = readtable(strcat(data_path, 'FVA_weights.csv'));
-FVA_clinical_weights = readtable(strcat(data_path, 'FVA_clinical_weights.csv'));
-FVA_genes_weights = readtable(strcat(data_path, 'FVA_genes_weights.csv'));
-FVA_all_weights = readtable(strcat(data_path, 'FVA_all_weights.csv'));
+metric = "median_"; % "", "median_"
+
+FVA_weights = readtable(strcat(data_path, metric, 'FVA_weights.csv'));
+FVA_clinical_weights = readtable(strcat(data_path, metric, 'FVA_clinical_weights.csv'));
+FVA_genes_weights = readtable(strcat(data_path, metric, 'FVA_genes_weights.csv'));
+FVA_all_weights = readtable(strcat(data_path, metric, 'FVA_all_weights.csv'));
 omics = {FVA_weights, FVA_clinical_weights, FVA_genes_weights, FVA_all_weights};
 
 C = {};
@@ -40,5 +42,5 @@ column_names = {'Adjusted P-values for FVA_weights' 'Pathways for FVA_weights' .
     'Adjusted P-values for FVA_genes_weights' 'Pathways for FVA_genes_weights' ... 
     'Adjusted P-values for FVA_all_weights' 'Pathways for FVA_all_weights'};
 T = vertcat(column_names, T);
-writetable(cell2table(T), strcat(data_path, "FVA_enrichment.csv"));
+writetable(cell2table(T), strcat(data_path, metric, "FVA_enrichment.csv"));
 
