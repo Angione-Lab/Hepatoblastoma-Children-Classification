@@ -26,23 +26,36 @@ load('Int4SVMl2_results.mat');
 all_results = fullConversion(SVM_results);
 clear SVM_results;
 
-rxn_weights = zeros(size(model.rxns));
-int3rxn_weights = zeros(size(model.rxns));
-int2rxn_weights = zeros(size(model.rxns));
-int4rxn_weights = zeros(size(model.rxns));
+num_reps = size(FVA_results.mdl, 1); 
+rxn_weights_reps = zeros(num_reps, size(model.rxns, 1));
+int3rxn_weights_reps = zeros(num_reps, size(model.rxns, 1));
+int2rxn_weights_reps = zeros(num_reps, size(model.rxns, 1));
+int4rxn_weights_reps = zeros(num_reps, size(model.rxns, 1));
 
-pathways_weights = zeros(size(unique(model.subSystems)));
-int3pathways_weights = zeros(size(unique(model.subSystems)));
-int2pathways_weights = zeros(size(unique(model.subSystems)));
-int4pathways_weights = zeros(size(unique(model.subSystems)));
+pathways_weights_reps = zeros(num_reps, size(unique(model.subSystems), 1));
+int3pathways_weights_reps = zeros(num_reps, size(unique(model.subSystems), 1));
+int2pathways_weights_reps = zeros(num_reps, size(unique(model.subSystems), 1));
+int4pathways_weights_reps = zeros(num_reps, size(unique(model.subSystems), 1));
 
-genes_weights = zeros(size(common_gene_ids));
-int3genes_weights = zeros(size(common_gene_ids));
-int2genes_weights = zeros(size(common_gene_ids));
-int4genes_weights = zeros(size(common_gene_ids));
+genes_weights_reps = zeros(num_reps, size(common_gene_ids, 1));
+int3genes_weights_reps = zeros(num_reps, size(common_gene_ids, 1));
+int2genes_weights_reps = zeros(num_reps, size(common_gene_ids, 1));
+int4genes_weights_reps = zeros(num_reps, size(common_gene_ids, 1));
 %% compute weights
 start_time = tic;
-for i=1:size(FVA_results.mdl, 1) % loop across the repetitions
+for i=1:num_reps % loop across the repetitions
+    rxn_weights = zeros(size(model.rxns)); 
+    int3rxn_weights = zeros(size(model.rxns));
+    pathways_weights = zeros(size(unique(model.subSystems))); 
+    int3pathways_weights = zeros(size(unique(model.subSystems))); 
+    genes_weights = zeros(size(common_gene_ids));
+    int3genes_weights = zeros(size(common_gene_ids)); 
+    int2rxn_weights = zeros(size(model.rxns));
+    int2pathways_weights = zeros(size(unique(model.subSystems))); 
+    int2genes_weights = zeros(size(common_gene_ids)); 
+    int4rxn_weights = zeros(size(model.rxns)); 
+    int4pathways_weights = zeros(size(unique(model.subSystems))); 
+    int4genes_weights = zeros(size(common_gene_ids)); 
     for j=1:size(FVA_results.mdl{i}.Beta) % loop across the weights/variables
         % reactions
         [indices_r] = ismember(model.rxns, FVA_results.predictors{i}{j});  % same for all simulations
@@ -84,62 +97,114 @@ for i=1:size(FVA_results.mdl, 1) % loop across the repetitions
             fprintf("\nNested cell array! i=%d, j=%d", i, j);
         end
     end
+    % update all the weights for the specific repetition 
+    rxn_weights_reps(i, :) = rxn_weights;
+    int3rxn_weights_reps(i, :) = int3rxn_weights;
+    int2rxn_weights_reps(i, :) = int2rxn_weights;
+    int4rxn_weights_reps(i, :) = int4rxn_weights;
+    pathways_weights_reps(i, :) = pathways_weights;
+    int3pathways_weights_reps(i, :) = int3pathways_weights;
+    int2pathways_weights_reps(i, :) = int2pathways_weights;
+    int4pathways_weights_reps(i, :) = int4pathways_weights;
+    genes_weights_reps(i, :) = genes_weights;
+    int3genes_weights_reps(i, :) = int3genes_weights;
+    int2genes_weights_reps(i, :) = int2genes_weights;
+    int4genes_weights_reps(i, :) = int4genes_weights;
 end
 end_time = toc(start_time);
 fprintf("\nTotal duration of weight computation: %f minutes\n", end_time./60);
 %% save data
+if metric == "sum"            
+    met = "";
+elseif metric == "median"
+    met = "median_";
+end
 % reactions
-idx_r = find(rxn_weights);
-writetable(cell2table(horzcat(model.rxns(idx_r), model.rxnNames(idx_r), num2cell(rxn_weights(idx_r)), ... 
-    repmat({'FVA'}, size(idx_r))), 'VariableNames', ... 
-    {'Reaction' 'Reaction_Name' 'Weight' 'Omic_combination'}), strcat(save_path, 'FVA_weights.csv'));
+idx_r = ~all(rxn_weights_reps == 0); 
+if metric == "sum"
+    rxn_data = transpose(sum(rxn_weights_reps(:, idx_r)));
+    int3rxn_data = transpose(sum(int3rxn_weights_reps(:, idx_r)));
+    int2rxn_data = transpose(sum(int2rxn_weights_reps(:, idx_r)));
+    int4rxn_data = transpose(sum(int4rxn_weights_reps(:, idx_r)));
+elseif metric == "median"
+    rxn_data = transpose(median(rxn_weights_reps(:, idx_r)));
+    int3rxn_data = transpose(median(int3rxn_weights_reps(:, idx_r)));
+    int2rxn_data = transpose(median(int2rxn_weights_reps(:, idx_r)));
+    int4rxn_data = transpose(median(int4rxn_weights_reps(:, idx_r)));
+end
+writetable(cell2table(horzcat(model.rxns(idx_r), model.rxnNames(idx_r), num2cell(rxn_data), ... 
+    repmat({'FVA'}, sum(idx_r), 1)), 'VariableNames', ... 
+    {'Reaction' 'Reaction_Name' 'Weight' 'Omic_combination'}), strcat(save_path, met, 'FVA_weights.csv'));
 
-writetable(cell2table(horzcat(model.rxns(idx_r), model.rxnNames(idx_r), num2cell(int3rxn_weights(idx_r)), ... 
-    repmat({'FVA_clinical'}, size(idx_r))), 'VariableNames', ... 
-    {'Reaction' 'Reaction_Name' 'Weight' 'Omic_combination'}), strcat(save_path, 'FVA_clinical_weights.csv'));
+writetable(cell2table(horzcat(model.rxns(idx_r), model.rxnNames(idx_r), num2cell(int3rxn_data), ... 
+    repmat({'FVA_clinical'}, sum(idx_r), 1)), 'VariableNames', ... 
+    {'Reaction' 'Reaction_Name' 'Weight' 'Omic_combination'}), strcat(save_path, met, 'FVA_clinical_weights.csv'));
 
-writetable(cell2table(horzcat(model.rxns(idx_r), model.rxnNames(idx_r), num2cell(int2rxn_weights(idx_r)), ... 
-    repmat({'FVA_genes'}, size(idx_r))), 'VariableNames', ... 
-    {'Reaction' 'Reaction_Name' 'Weight' 'Omic_combination'}), strcat(save_path, 'FVA_genes_weights.csv'));
+writetable(cell2table(horzcat(model.rxns(idx_r), model.rxnNames(idx_r), num2cell(int2rxn_data), ... 
+    repmat({'FVA_genes'}, sum(idx_r), 1)), 'VariableNames', ... 
+    {'Reaction' 'Reaction_Name' 'Weight' 'Omic_combination'}), strcat(save_path, met, 'FVA_genes_weights.csv'));
 
-writetable(cell2table(horzcat(model.rxns(idx_r), model.rxnNames(idx_r), num2cell(int4rxn_weights(idx_r)), ... 
-    repmat({'all'}, size(idx_r))), 'VariableNames', ... 
-    {'Reaction' 'Reaction_Name' 'Weight' 'Omic_combination'}), strcat(save_path, 'FVA_all_weights.csv'));
+writetable(cell2table(horzcat(model.rxns(idx_r), model.rxnNames(idx_r), num2cell(int4rxn_data), ... 
+    repmat({'all'}, sum(idx_r), 1)), 'VariableNames', ... 
+    {'Reaction' 'Reaction_Name' 'Weight' 'Omic_combination'}), strcat(save_path, met, 'FVA_all_weights.csv'));
 % pathways
 unique_pathways = unique(model.subSystems);
-idx_p = find(pathways_weights);
-writetable(cell2table(horzcat(unique_pathways(idx_p), num2cell(pathways_weights(idx_p)), ... 
-    repmat({'FVA'}, size(idx_p))), 'VariableNames', ... 
-    {'Pathway' 'Weight' 'Omic_combination'}), strcat(save_path, 'pathways_weights.csv'));
+idx_p = ~all(pathways_weights_reps == 0); 
+if metric == "sum"
+    pathways_data = transpose(sum(pathways_weights_reps(:, idx_p)));
+    int3pathways_data = transpose(sum(int3pathways_weights_reps(:, idx_p)));
+    int2pathways_data = transpose(sum(int2pathways_weights_reps(:, idx_p)));
+    int4pathways_data = transpose(sum(int4pathways_weights_reps(:, idx_p)));
+elseif metric == "median"
+    pathways_data = transpose(median(pathways_weights_reps(:, idx_p)));
+    int3pathways_data = transpose(median(int3pathways_weights_reps(:, idx_p)));
+    int2pathways_data = transpose(median(int2pathways_weights_reps(:, idx_p)));
+    int4pathways_data = transpose(median(int4pathways_weights_reps(:, idx_p)));
+end
+writetable(cell2table(horzcat(unique_pathways(idx_p), num2cell(pathways_data), ... 
+    repmat({'FVA'}, sum(idx_p), 1)), 'VariableNames', ... 
+    {'Pathway' 'Weight' 'Omic_combination'}), strcat(save_path, met, 'pathways_weights.csv'));
 
-writetable(cell2table(horzcat(unique_pathways(idx_p), num2cell(int3pathways_weights(idx_p)), ... 
-    repmat({'FVA_clinical'}, size(idx_p))), 'VariableNames', ... 
-    {'Pathway' 'Weight' 'Omic_combination'}), strcat(save_path, 'pathways_clinical_weights.csv'));
+writetable(cell2table(horzcat(unique_pathways(idx_p), num2cell(int3pathways_data), ... 
+    repmat({'FVA_clinical'}, sum(idx_p), 1)), 'VariableNames', ... 
+    {'Pathway' 'Weight' 'Omic_combination'}), strcat(save_path, met, 'pathways_clinical_weights.csv'));
 
-writetable(cell2table(horzcat(unique_pathways(idx_p), num2cell(int2pathways_weights(idx_p)), ... 
-    repmat({'FVA_genes'}, size(idx_p))), 'VariableNames', ... 
-    {'Pathway' 'Weight' 'Omic_combination'}), strcat(save_path, 'pathways_genes_weights.csv'));
+writetable(cell2table(horzcat(unique_pathways(idx_p), num2cell(int2pathways_data), ... 
+    repmat({'FVA_genes'}, sum(idx_p), 1)), 'VariableNames', ... 
+    {'Pathway' 'Weight' 'Omic_combination'}), strcat(save_path, met, 'pathways_genes_weights.csv'));
 
-writetable(cell2table(horzcat(unique_pathways(idx_p), num2cell(int4pathways_weights(idx_p)), ... 
-    repmat({'all'}, size(idx_p))), 'VariableNames', ... 
-    {'Pathway' 'Weight' 'Omic_combination'}), strcat(save_path, 'pathways_all_weights.csv'));
+writetable(cell2table(horzcat(unique_pathways(idx_p), num2cell(int4pathways_data), ... 
+    repmat({'all'}, sum(idx_p), 1)), 'VariableNames', ... 
+    {'Pathway' 'Weight' 'Omic_combination'}), strcat(save_path, met, 'pathways_all_weights.csv'));
 % genes
-idx_g = find(genes_weights);
+idx_g = ~all(genes_weights_reps == 0);
+if metric == "sum"
+    genes_data = transpose(sum(genes_weights_reps(:, idx_g)));
+    int3genes_data = transpose(sum(int3genes_weights_reps(:, idx_g)));
+    int2genes_data = transpose(sum(int2genes_weights_reps(:, idx_g)));
+    int4genes_data = transpose(sum(int4genes_weights_reps(:, idx_g)));
+elseif metric == "median"
+    genes_data = transpose(median(genes_weights_reps(:, idx_g)));
+    int3genes_data = transpose(median(int3genes_weights_reps(:, idx_g)));
+    int2genes_data = transpose(median(int2genes_weights_reps(:, idx_g)));
+    int4genes_data = transpose(median(int4genes_weights_reps(:, idx_g)));
+end
 genes_array = cellstr(common_gene_ids);
-writetable(cell2table(horzcat(genes_array(idx_g), num2cell(genes_weights(idx_g)), ... 
-    repmat({'genes'}, size(idx_g))), 'VariableNames', ... 
-    {'Gene' 'Weight' 'Omic_combination'}), strcat(save_path, 'genes_weights.csv'));
+writetable(cell2table(horzcat(genes_array(idx_g), num2cell(genes_data), ... 
+    repmat({'genes'}, sum(idx_g), 1)), 'VariableNames', ... 
+    {'Gene' 'Weight' 'Omic_combination'}), strcat(save_path, met, 'genes_weights.csv'));
 
-writetable(cell2table(horzcat(genes_array(idx_g), num2cell(int3genes_weights(idx_g)), ... 
-    repmat({'genes_clinical'}, size(idx_g))), 'VariableNames', ... 
-    {'Gene' 'Weight' 'Omic_combination'}), strcat(save_path, 'genes_clinical_weights.csv'));
+writetable(cell2table(horzcat(genes_array(idx_g), num2cell(int3genes_data), ... 
+    repmat({'genes_clinical'}, sum(idx_g), 1)), 'VariableNames', ... 
+    {'Gene' 'Weight' 'Omic_combination'}), strcat(save_path, met, 'genes_clinical_weights.csv'));
 
-writetable(cell2table(horzcat(genes_array(idx_g), num2cell(int2genes_weights(idx_g)), ... 
-    repmat({'FVA_genes'}, size(idx_g))), 'VariableNames', ... 
-    {'Gene' 'Weight' 'Omic_combination'}), strcat(save_path, 'genes_FVA_weights.csv'));
+writetable(cell2table(horzcat(genes_array(idx_g), num2cell(int2genes_data), ... 
+    repmat({'FVA_genes'}, sum(idx_g), 1)), 'VariableNames', ... 
+    {'Gene' 'Weight' 'Omic_combination'}), strcat(save_path, met, 'genes_FVA_weights.csv'));
 
-writetable(cell2table(horzcat(genes_array(idx_g), num2cell(int4genes_weights(idx_g)), ... 
-    repmat({'all'}, size(idx_g))), 'VariableNames', ... 
-    {'Gene' 'Weight' 'Omic_combination'}), strcat(save_path, 'genes_all_weights.csv'));
+writetable(cell2table(horzcat(genes_array(idx_g), num2cell(int4genes_data), ... 
+    repmat({'all'}, sum(idx_g), 1)), 'VariableNames', ... 
+    {'Gene' 'Weight' 'Omic_combination'}), strcat(save_path, met, 'genes_all_weights.csv'));
+
 
 
