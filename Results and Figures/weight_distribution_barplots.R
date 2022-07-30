@@ -44,7 +44,7 @@ if (data == "pathways_weights" | data == "pathways_clinical_weights" | data == "
 # rename columns
 if (data == "FVA_weights" | data == "FVA_clinical_weights" | data == "FVA_genes_weights" | data == "FVA_all_weights") {
   colnames(dataframe) <- c("Omic", "Reaction name", "Weight", "Omic combination")
-} else if (data == "pathways_weights" | data == "pathways_clinical_weights" | data == "pathways_genes_weights" | data == "pathways_all_weights") ######################## CAMBIARE GITHUB
+} else if (data == "pathways_weights" | data == "pathways_clinical_weights" | data == "pathways_genes_weights" | data == "pathways_all_weights") 
 {
   colnames(dataframe) <- c("Omic", "Weight", "Omic combination")
 } else {
