@@ -11,11 +11,16 @@ rm(list=ls()) # clear the environment
 
 ##################### change these
 data = "FVA_weights" # "genes", "FVA, "pathways" + "_weights", "_clinical_weights", "_all_weights", or "genes_FVA_weights", "FVA_genes_weights", "pathways_genes_weights"
-file_input = paste0("path\\", data, ".csv") # 
-file_output = paste0(data, "_barplot.pdf")
+metric = "median_" # "", "median_" 
+file_input = paste0("path\\", metric, data, ".csv") # 
+file_output = paste0(metric, data, "_barplot.pdf")
 #####################
 
+if (metric == "median_") {  ######################## CAMBIARE GITHUB (TUTTO IL BLOCCO IF)
+  y_title <- expression("Median weight")
+} else {
 y_title <- expression("Cumulative weight")
+}
 dataframe <- read.csv(file = file_input, header = TRUE)   
 
 # convert HGNC IDs into GENE NAME IDs
@@ -39,6 +44,9 @@ if (data == "pathways_weights" | data == "pathways_clinical_weights" | data == "
 # rename columns
 if (data == "FVA_weights" | data == "FVA_clinical_weights" | data == "FVA_genes_weights" | data == "FVA_all_weights") {
   colnames(dataframe) <- c("Omic", "Reaction name", "Weight", "Omic combination")
+} else if (data == "pathways_weights" | data == "pathways_clinical_weights" | data == "pathways_genes_weights" | data == "pathways_all_weights") ######################## CAMBIARE GITHUB
+{
+  colnames(dataframe) <- c("Omic", "Weight", "Omic combination")
 } else {
   colnames(dataframe) <- c("Old ID", "Omic", "Weight", "Omic combination")
 }
