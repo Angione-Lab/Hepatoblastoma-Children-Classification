@@ -21,7 +21,7 @@ pathway.cor <- pathway.cor[Reduce(`&`, lapply(pathway.cor, function(x) !(is.na(x
 
 p <- pathway.cor %>% filter(Mean > 0.0) %>%            # in order to disregard the pathways with 0 weight
   filter(quantile(Mean, percent_threshold)<Mean) %>%
-  ggplot(aes(x = reorder(Pathway, -Mean), y = Mean), fill = Status, color = as.factor(Status)) +
+  ggplot(aes(x = Pathway, y = Mean), fill = Status, color = as.factor(Status)) +
   geom_bar(aes(fill = Status), stat = "identity", alpha = 0.6) +
   theme_bw() + 
   scale_y_continuous(breaks = br, limits = lim) +         # only positive value
