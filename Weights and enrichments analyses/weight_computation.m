@@ -2,6 +2,7 @@
 clc, clear
 
 save_path = 'path\';
+metric = ""; % "", "median"
 
 addpath(genpath('path\SVM results'));
 addpath(genpath('path\countmember'));
@@ -114,14 +115,14 @@ end
 end_time = toc(start_time);
 fprintf("\nTotal duration of weight computation: %f minutes\n", end_time./60);
 %% save data
-if metric == "sum"            
+if metric == ""            
     met = "";
 elseif metric == "median"
     met = "median_";
 end
 % reactions
 idx_r = ~all(rxn_weights_reps == 0); 
-if metric == "sum"
+if metric == ""
     rxn_data = transpose(sum(rxn_weights_reps(:, idx_r)));
     int3rxn_data = transpose(sum(int3rxn_weights_reps(:, idx_r)));
     int2rxn_data = transpose(sum(int2rxn_weights_reps(:, idx_r)));
@@ -150,7 +151,7 @@ writetable(cell2table(horzcat(model.rxns(idx_r), model.rxnNames(idx_r), num2cell
 % pathways
 unique_pathways = unique(model.subSystems);
 idx_p = ~all(pathways_weights_reps == 0); 
-if metric == "sum"
+if metric == ""
     pathways_data = transpose(sum(pathways_weights_reps(:, idx_p)));
     int3pathways_data = transpose(sum(int3pathways_weights_reps(:, idx_p)));
     int2pathways_data = transpose(sum(int2pathways_weights_reps(:, idx_p)));
@@ -178,7 +179,7 @@ writetable(cell2table(horzcat(unique_pathways(idx_p), num2cell(int4pathways_data
     {'Pathway' 'Weight' 'Omic_combination'}), strcat(save_path, met, 'pathways_all_weights.csv'));
 % genes
 idx_g = ~all(genes_weights_reps == 0);
-if metric == "sum"
+if metric == ""
     genes_data = transpose(sum(genes_weights_reps(:, idx_g)));
     int3genes_data = transpose(sum(int3genes_weights_reps(:, idx_g)));
     int2genes_data = transpose(sum(int2genes_weights_reps(:, idx_g)));
