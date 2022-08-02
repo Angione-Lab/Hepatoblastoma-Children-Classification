@@ -5,7 +5,7 @@ addpath(genpath([packages '\cbrewer']));
 addpath(genpath([packages '\fix_xticklabels']));
 addpath(genpath([packages '\ihstevenson-beeswarm']));
 
-fig = 'tumour_groups_PCA'; % 'sample_data', 'batch_correction_PCA', 'tumour_groups_PCA'
+fig = 'tumour_groups_PCA'; % 'sample_data', 'batch_correction_PCA', 'tumour_groups_PCA', 'tumour_groups_PCA_sex'
 
 if strcmp(fig, 'sample_data')
     load('path\combined_dataset.mat')
@@ -140,6 +140,52 @@ elseif strcmp(fig, 'tumour_groups_PCA')
     hold on
     scatter(score(~idx,1), score(~idx,2), 5+3*sampleData.Age(~idx), cb2(1,:), 'o', 'filled')
     scatter(score(idx,1), score(idx,2), 5+3*sampleData.Age(idx), cb2(2,:), 'o', 'filled')
+    box on
+    hold off
+
+    legend({'Control', 'Tumour'}, 'Location', 'southwest', 'FontSize', 20)
+    xlabel(['PC1 (', num2str(round(explained(1), 1)), '%)'], 'FontSize', 20, 'FontWeight', 'bold')
+    ylabel(['PC2 (', num2str(round(explained(2), 1)), '%)'], 'FontSize', 20, 'FontWeight', 'bold')
+    title('Metabolic fluxes', 'FontSize', 20)
+    
+    fig = gcf;
+    fig.PaperUnits = 'inches';
+    fig.PaperSize = [5 10.5];
+    fig.PaperPosition = [-.85 .01 12 5];
+    fig.PaperOrientation = 'landscape';
+    print('tumour groups PCA', '-dpdf', '-r600');
+
+elseif strcmp(fig, 'tumour_groups_PCA_sex')  % biological gender instead of age as visualisation layer
+    fluxes = readtable('path\maxFluxes.csv', 'ReadRowNames', true);
+    load('path\combined_dataset.mat')
+    fluxes = fluxes{:, :};
+    sampleData.Status(strcmp(sampleData.Status, 'Tumor')) = {'Tumour'};
+    cb2 = cbrewer('qual', 'Set2', 3);
+    idx = strcmp(sampleData.Status, 'Tumour');
+    
+    [coeff,score,latent,tsquared,explained,mu] = pca(zscore(geneData_combat_p'));
+    subplot(1, 2, 1)
+    [~, male_idx] = ismember(sampleData.Sex, 'Male');
+    [~, female_idx] = ismember(sampleData.Sex, 'Female');
+    sizes = zeros(size(sampleData.Age));
+    sizes(logical(male_idx)) = 3;
+    sizes(logical(female_idx)) = 10;
+    hold on
+    scatter(score(~idx,1), score(~idx,2), 5+5*sizes(~idx), cb2(1,:), 'o', 'filled')
+    scatter(score(idx,1), score(idx,2), 5+5*sizes(idx), cb2(2,:), 'o', 'filled')
+    box on
+    hold off
+
+    legend({'Control', 'Tumour'}, 'Location', 'northwest', 'FontSize', 20)
+    xlabel(['PC1 (', num2str(round(explained(1), 1)), '%)'], 'FontSize', 20, 'FontWeight', 'bold')
+    ylabel(['PC2 (', num2str(round(explained(2), 1)), '%)'], 'FontSize', 20, 'FontWeight', 'bold')
+    title('Gene expression', 'FontSize', 20)
+    
+    [coeff,score,latent,tsquared,explained,mu] = pca(zscore(fluxes));
+    subplot(1, 2, 2)
+    hold on
+    scatter(score(~idx,1), score(~idx,2), 5+5*sizes(~idx), cb2(1,:), 'o', 'filled')
+    scatter(score(idx,1), score(idx,2), 5+5*sizes(idx), cb2(2,:), 'o', 'filled')
     box on
     hold off
 
