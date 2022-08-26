@@ -19,7 +19,7 @@ file_output = paste0(metric, data, "_barplot.pdf")
 if (metric == "median_") {  ######################## CAMBIARE GITHUB (TUTTO IL BLOCCO IF)
   y_title <- expression("Median weight")
 } else {
-y_title <- expression("Cumulative weight")
+y_title <- expression("Total weight")
 }
 dataframe <- read.csv(file = file_input, header = TRUE)   
 
