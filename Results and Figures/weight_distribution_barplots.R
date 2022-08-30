@@ -16,10 +16,10 @@ file_input = paste0("path\\", metric, data, ".csv") #
 file_output = paste0(metric, data, "_barplot.pdf")
 #####################
 
-if (metric == "median_") {  ######################## CAMBIARE GITHUB (TUTTO IL BLOCCO IF)
+if (metric == "median_") {
   y_title <- expression("Median weight")
 } else {
-y_title <- expression("Total weight")
+y_title <- expression("Cumulative weight")
 }
 dataframe <- read.csv(file = file_input, header = TRUE)   
 
@@ -74,7 +74,7 @@ p <- dataframe %>% filter(quantile(Weight, percent_threshold)<Weight) %>%
         axis.text.x = element_text(hjust = 1, vjust = 1.0, angle = 90, size = 20), # x-axis
         axis.text.y = element_text(size = 20),  # ticks on y-axis
         panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"), legend.position="none") +
-  scale_fill_gradient(low = "#E16670", high = "#CC2936") # two colour-codes: (#AF47FF, #6200AC ) for genes, (#E16670, #CC2936) for fluxes
+  scale_fill_gradient(low = "#E16670", high = "#CC2936") # two colour-codes: (#AF47FF, #6200AC) for genes, (#E16670, #CC2936) for fluxes
 
 ggsave(filename = file_output, width = w_save, height = h_save, dpi=600, device="pdf")
 
